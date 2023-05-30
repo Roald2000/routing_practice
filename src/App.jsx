@@ -17,7 +17,7 @@ const Contact = () => {
 const Projects = () => {
   return <div>
     <ul className='flex flex-row gap-3'>
-      <li><Link className='p-1 rounded-md bg-slate-200' to={'Dialog Modal'}>Dialog Modal</Link></li>
+      <li><Link className='p-1 rounded-md bg-slate-200' to={'dialogmodal'}>Dialog Modal</Link></li>
       <li><Link className='p-1 rounded-md bg-slate-200' to={'landingpage'}>Landing Page Project</Link></li>
     </ul>
     <div>
@@ -27,8 +27,8 @@ const Projects = () => {
 }
 
 
-const Todo = () => {
-  return <h1>Todo</h1>
+const DialogModal = () => {
+  return <h1>Dialog Modal</h1>
 }
 
 const LandingPage = () => {
@@ -40,6 +40,7 @@ const App = () => {
     <header className='container mx-auto my-0 p-3 bg-slate-300 flex flex-row justify-between items-center'>
       <ul>
         <li><h1>React Router Dom V6</h1></li>
+        <li><Link to={'https://github.com/Roald2000/routing_practice'} target='_blank'>Github Repo</Link></li>
       </ul>
       <ul className='flex flex-row gap-3'>
         <li><Link to={'routing_practice/'}>Home</Link></li>
@@ -54,7 +55,7 @@ const App = () => {
         <Route exact path='routing_practice/about' element={<About />} />
         <Route exact path='routing_practice/contact' element={<Contact />} />
         <Route exact path='routing_practice/projects' element={<Projects />}>
-          <Route path='todo' element={<Todo />} />
+          <Route path='dialogmodal' element={<DialogModal />} />
           <Route path='landingpage' element={<LandingPage />} />
         </Route>
       </Routes>
